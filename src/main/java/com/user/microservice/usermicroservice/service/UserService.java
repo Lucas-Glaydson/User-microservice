@@ -15,7 +15,7 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    private RegisterResponseDTO register(RegisterRequestDTO dto) throws Exception {
+    public RegisterResponseDTO register(RegisterRequestDTO dto) throws Exception {
         if(userRepository.findByEmail(dto.email()) != null) throw new Exception();
 
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
