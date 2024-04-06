@@ -1,5 +1,6 @@
 package com.user.microservice.usermicroservice.model;
 
+import com.user.microservice.usermicroservice.dtos.register.RegisterRequestDTO;
 import com.user.microservice.usermicroservice.role.UserRole;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -24,6 +25,14 @@ public class UserModel implements UserDetails {
     private String email;
     private String password;
     private UserRole role;
+
+    public UserModel(RegisterRequestDTO dto){
+        this.firstName = dto.firstName();
+        this.lastName = dto.lastName();
+        this.email = dto.email();
+        this.password = dto.password();
+        this.role = dto.role();
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
