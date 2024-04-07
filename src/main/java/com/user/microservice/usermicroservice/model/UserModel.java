@@ -12,7 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.List;
 
-@Entity
+@Entity(name = "users")
 @Table(name = "users")
 @Data
 @NoArgsConstructor
@@ -20,10 +20,13 @@ public class UserModel implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
+    @Column(name = "first_name")
     private String firstName;
+    @Column(name = "last_name")
     private String lastName;
     private String email;
     private String password;
+    @Enumerated(EnumType.STRING)
     private UserRole role;
 
     public UserModel(RegisterRequestDTO dto){
