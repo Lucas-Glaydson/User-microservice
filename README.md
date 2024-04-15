@@ -23,4 +23,12 @@ CREATE TABLE IF NOT EXISTS `users` (
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ```
-
+## Rotas
+### Register
+```
+http://localhost:8080/auth/register
+```
+### Login
+```
+http://localhost:8080/auth/register
+```
