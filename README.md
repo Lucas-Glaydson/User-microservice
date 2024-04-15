@@ -30,5 +30,5 @@ http://localhost:8080/auth/register
 ```
 ### Login
 ```
-http://localhost:8080/auth/register
+http://localhost:8080/auth/login
 ```
