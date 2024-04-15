@@ -33,7 +33,7 @@ public class UserService {
     }
 
     public void sendEmailWhenRegister(String to){
-        var emailRequest = new EmailRequestDTO("manager-web", "webmanager094@gmail.com", to, "You have been registered successfully", "You were registered successfully, manager-web thanks your collaboration");
+        var emailRequest = new EmailRequestDTO("manager-web", "webmanager094@gmail.com", to, "You have been registered successfully", "You were registered successfully, Lucas Glaydson thanks your collaboration");
         emailService.sendEmail(emailRequest);
     }
 }
