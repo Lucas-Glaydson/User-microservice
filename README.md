@@ -32,3 +32,6 @@ http://localhost:8080/auth/register
 ```
 http://localhost:8080/auth/login
 ```
+
+## Swagger : http://localhost:8080/swagger-ui/index.html#/
+
